@@ -16,7 +16,7 @@ const Home = ({allPostsData}: {
   }[]
 }) => {
   return (
-    <div>
+    <div className={homeStyles.container}>
       <Head>
         <title>Park Jean Young</title>
       </Head>

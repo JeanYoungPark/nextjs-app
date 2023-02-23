@@ -1,5 +1,6 @@
 import { getAllPostIds, getPostData } from '@/lib/post';
 import { GetStaticPaths, GetStaticProps } from 'next'
+import homeStyles from '@/styles/Post.module.css'
 import Head from 'next/head';
 import React from 'react'
 
@@ -11,7 +12,7 @@ export default function Post({postData}: {
     }
 }) {
   return (
-    <div>
+    <div className={homeStyles.container}>
         <Head>
             <title>{postData.title}</title>
         </Head>
