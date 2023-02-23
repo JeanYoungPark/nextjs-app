@@ -4,6 +4,7 @@ import { Inter } from '@next/font/google'
 import homeStyles from '@/styles/Home.module.css'
 import { GetStaticProps, NextPage } from 'next'
 import { getSortedPostsData } from '@/lib/post'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,7 +31,7 @@ const Home = ({allPostsData}: {
         <ul className={homeStyles.list}>
           {allPostsData.map(({id, title, date}) => 
             <li className={homeStyles.listItem} key={id}>
-              <a>{title}</a>
+              <Link href={`/posts/${id}`}>{title}</Link>
               <br />
               <small className={homeStyles.lightText}>
                 {date}
