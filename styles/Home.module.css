@@ -18,3 +18,11 @@
   padding: 0;
   margin: 0;
 }
+
+.listIten {
+  margin: 0 0 1.25em; 
+}
+
+.lightText {
+  color: #666;
+}
